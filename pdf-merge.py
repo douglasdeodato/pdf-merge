@@ -2,7 +2,7 @@ import PyPDF2
 import os
 
 def merge_pdfs(input_folder, output_file):
-    pdf_merger = PyPDF2.PdfFileMerger()
+    pdf_merger = PyPDF2.PdfMerger()
 
     # Get a list of all PDF files in the input folder
     pdf_files = [f for f in os.listdir(input_folder) if f.endswith('.pdf')]
@@ -22,10 +22,10 @@ def merge_pdfs(input_folder, output_file):
     print(f'Merged {len(pdf_files)} PDF files into {output_file}')
 
 # Set the input folder containing your PDF files
-input_folder = '1'
+input_folder = '/path/to/your/pdf/files'
 
 # Set the output file name for the merged PDF
-output_file = 'merged.pdf'
+output_file = '/path/to/your/output/merged.pdf'
 
 # Call the merge_pdfs function
 merge_pdfs(input_folder, output_file)
